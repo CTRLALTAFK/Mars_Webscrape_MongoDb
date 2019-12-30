@@ -11,7 +11,7 @@ def scrape():
                  "featured_image": featured_img_url(browser),
                  "weather":twitter_weather (browser),
                  "facts": mars_facts(),
-                 "hemispheres":hemispheres(browser)}      
+                 "Mars_hemispheres":hemispheres(browser)}      
     browser.quit()
     return mars_data
 

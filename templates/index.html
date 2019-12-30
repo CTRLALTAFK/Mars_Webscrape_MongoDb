@@ -39,14 +39,14 @@
         <div class ="row" id="mars-hemispheres">
             <div class = "col-md-12">
                 <h3><center>Mars Hemispheres</center></h3>
-                {% for hemisphere in mars.hemispheres %}
+                 {% for hemisphere in mars.Mars_hemispheres %}
                     <div class = "col-md-6">
                         <div class = "thumbnail">
-                            <img src = "{{hemispheres.img_url}}">
-                                <h3>{{hemispheres.title}}</h3>
+                            <img src = "{{mars.hemisphere_image_urls}}">
+                                <h3>{{hemisphere.title}}</h3>
                             </div>
                         </div>
-                {% endfor %}
+                   {% endfor %}
                     </div>
             
             </div>
