@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as bs
 import pandas as pd
 
 def scrape():
-    executable_path = {"executable_path": "C:\\Users\\Lunch\\Documents\\NASA_Mars_webscrape\\NASA_Mars_webscrape\\chromedriver"}
+    executable_path = {"executable_path": "chromedriver.exe"}
     browser = Browser("chrome",**executable_path, headless=False)
     news_title, news_par = mars_news(browser)
     mars_data = {"news_title": news_title, 

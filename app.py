@@ -21,7 +21,7 @@ def index():
 @app.route("/scrape")
 def scraper():
     ___ = mongo.db.___
-    ____data = scrape_mars.scrape()
+    ____data = Mars_webscrape.scrape()
     ___.update({}, ____data, upsert=True)
     return redirect("/", code=302)
 
