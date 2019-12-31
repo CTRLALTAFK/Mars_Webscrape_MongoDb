@@ -1,9 +1,10 @@
 from splinter import Browser
 from bs4 import BeautifulSoup as bs
 import pandas as pd
+import time
 
 def scrape():
-    executable_path = {"executable_path": "chromedriver.exe"}
+    executable_path = {"executable_path": "C:\\Users\\Lunch\\Documents\\Mars_Webscrape_MongoDb\\chromedriver.exe"}
     browser = Browser("chrome",**executable_path, headless=False)
     news_title, news_par = mars_news(browser)
     mars_data = {"news_title": news_title, 
@@ -58,6 +59,7 @@ def twitter_weather (browser):
     url = "https://twitter.com/marswxreport?lang=en"
     browser.visit(url)
     html = browser.html
+    time.sleep(5)
     soup_weather = bs(html, "html.parser")
     # Find a Tweet with the data-name `Mars Weather`
     mars_weather_tweet = soup_weather.find("div", 
@@ -80,8 +82,9 @@ def hemispheres(browser):
     url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
     browser.visit(url)
     hemisphere_image_urls = []
+    time.sleep(5)
     links = browser.find_by_css("a.product-item h3")               
-
+    time.sleep(5)
     for i in enumerate (links):
         
         hemisphere = {}    
