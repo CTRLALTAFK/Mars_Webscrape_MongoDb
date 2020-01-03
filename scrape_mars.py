@@ -12,7 +12,7 @@ def scrape():
                  "featured_image": featured_img_url(browser),
                  "weather":twitter_weather (browser),
                  "facts": mars_facts(),
-                 "Mars_hemispheres":hemispheres(browser)}      
+                 "hemispheres":hemispheres(browser)}      
     browser.quit()
     return mars_data
 
@@ -58,10 +58,10 @@ def featured_img_url(browser):
 def twitter_weather (browser):
     url = "https://twitter.com/marswxreport?lang=en"
     browser.visit(url)
+    browser.is_element_present_by_text("Mars Weather", wait_time=1)
     html = browser.html
-    time.sleep(5)
     soup_weather = bs(html, "html.parser")
-    # Find a Tweet with the data-name `Mars Weather`
+       # Find a Tweet with the data-name `Mars Weather`
     mars_weather_tweet = soup_weather.find("div", 
                                     attrs={
                                         "class": "tweet", 
@@ -82,13 +82,13 @@ def hemispheres(browser):
     url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
     browser.visit(url)
     hemisphere_image_urls = []
-    time.sleep(5)
-    links = browser.find_by_css("a.product-item h3")               
-    time.sleep(5)
-    for i in enumerate (links):
+    # links = browser.find_by_css("a.product-item h3")               
+   
+    for i in range (4):
         
         hemisphere = {}    
         browser.find_by_css("a.product-item h3")[i].click()
+
         #title
         hemisphere["title"] = browser.find_by_css("h2.title").text
         hemisphere_image_urls.append(hemisphere)
