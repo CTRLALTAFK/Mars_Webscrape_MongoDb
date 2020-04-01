@@ -1,6 +1,6 @@
 # Mars_Webscrape_MongoDb
 
-Currently not hosting the app/databse online so this only works if ran on localhost.
+Currently not hosting the app/database online so this only works if ran on localhost.
 
 
 Scraping-Mars-Data
