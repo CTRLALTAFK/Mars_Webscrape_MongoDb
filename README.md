@@ -1,6 +1,6 @@
 # Mars_Webscrape_MongoDb
 
-Currently not hosting the app/database online so this only works if ran on localhost.
+You will need to change the Chromedriver.exe file path !!!
 
 
 Scraping-Mars-Data
