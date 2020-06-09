@@ -21,12 +21,12 @@ Completed the "INITIAL" scraping with Jupyter Notebook, BeautifulSoup, Pandas, a
 * Used Splinter to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
 
 ## NASA Mars News
-![](images/mars_News_capture.PNG)
+![](images/mars_News_capture.png)
 
 * Scraped the [NASA Mars News Site](https://mars.nasa.gov/news/) and collect the latest News Title and Paragraph Text. Assigned title & text to variables for reference later.
 
 ## JPL Mars Space Images - Featured Image
-![](images/mars_photo_with_icecap.PNG)
+![](images/mars_photo_with_icecap.png)
 
 * Visited the url for JPL Featured Space Image [here](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars).
    #### ( *Carousel cycles through feature "NASA spaceimages" and therefore the featured photo "May or May Not" be a Mars Photo* )
@@ -35,12 +35,12 @@ Completed the "INITIAL" scraping with Jupyter Notebook, BeautifulSoup, Pandas, a
 
 
 ## Mars Weather
-![](images/mars_Weather_Twitter_Account.PNG)
+![](images/mars_Weather_Twitter_Account.png)
 
 * Visited the Mars Weather twitter account [here](https://twitter.com/marswxreport?lang=en) and scraped the latest Mars weather tweet from the page. Saved the tweet text for the weather report as a variable called `mars_weather`.
 
 ## Mars Facts
-![](images/mars_Facts.PNG)
+![](images/mars_Facts.png)
 
 * Visited the Mars Facts webpage [here](https://space-facts.com/mars/) and used Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
 
